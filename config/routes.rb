@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
   devise_for :users
+
+  root :to => 'lamps#client'
+
+  scope '/api' do
+    get 'register' => 'lamps#register'
+    resources :lamps
+  end
+
 end

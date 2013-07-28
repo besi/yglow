@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131085720) do
+ActiveRecord::Schema.define(version: 20150131101419) do
+
+  create_table "lamps", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "stage_id"
+    t.string   "color"
+  end
+
+  create_table "stages", force: true do |t|
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
