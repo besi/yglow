@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   scope '/api' do
     get 'register' => 'lamps#register'
+    get 'ping/:number' => 'stages#ping'
     resources :lamps
   end
 

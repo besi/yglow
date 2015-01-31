@@ -12,7 +12,7 @@ class window.Service
       @clientIdentifier = data.id
       console.log "Started session with identifier #{data.id}"
       this.handleResponse(data)
-      setInterval(this.reload, 4 * 1000)
+      setInterval(this.reload, 2 * 1000)
 
   reload: =>
     $.get "/api/lamps/#{@clientIdentifier}", (data)=>
