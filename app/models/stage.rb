@@ -15,7 +15,7 @@ class Stage < ActiveRecord::Base
 
   def hello(lamp)
 
-    last_color = self.lamps.last.color rescue 'blue'
+    last_color = self.lamps.last.color rescue default_color
     lamp.stage = self
     lamp.save!
 
@@ -24,6 +24,16 @@ class Stage < ActiveRecord::Base
   end
 
   def next_color(color)
-    colors[(colors.index(color) + 1) % colors.count]
+    colors[(colors.index(color) + 1) % colors.count] rescue default_color
   end
+
+  def set_color(color)
+    lamps.map{|l| l.update_attribute(:color, color) }
+  end
+
+
+  def default_color
+    'blue'
+  end
+
 end
