@@ -15,11 +15,12 @@ class Stage < ActiveRecord::Base
 
   def hello(lamp)
 
-    new_color = self.lamps.present? ? next_color(self.lamps.last.color) : colors.first
-
+    last_color = self.lamps.last.color
     lamp.stage = self
-    lamp.color = new_color
     lamp.save!
+
+    new_color = self.lamps.present? ? next_color(last_color) : colors.first
+    lamp.update_attribute(:color, new_color)
   end
 
   def next_color(color)
