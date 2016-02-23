@@ -24,6 +24,15 @@ State of affairs
 4. Dial a number on the phone and the "lamps" will change their color. Alternatively open the [ping URL][ping] in a browser. 
 
 
+Api
+---
+
+The Api lets you do these things:
+
+- Rotate colors: `http://yglow.herokuapp.com/api/ping/{number}`
+- Set a color to all lamps: `http://yglow.herokuapp.com/api/color/{hex-color}`
+
+
 Deployment
 ----------
 
