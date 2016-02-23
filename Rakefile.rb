@@ -4,3 +4,14 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+task :dev do
+
+  puts `
+  gittower .
+  mine .
+  powder open
+  open /Applications/Bigbucket.app
+  `
+
+end
