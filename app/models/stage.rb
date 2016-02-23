@@ -15,7 +15,7 @@ class Stage < ActiveRecord::Base
 
   def hello(lamp)
 
-    last_color = self.lamps.last.color
+    last_color = self.lamps.last.color rescue 'blue'
     lamp.stage = self
     lamp.save!
 
