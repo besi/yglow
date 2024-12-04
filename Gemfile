@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
-gem 'rails', '4.2'
+ruby '2.6.10'
+gem 'rails', '4.2.11'
 gem 'sass-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'mysql2'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 group :development, :test do
@@ -15,6 +16,7 @@ group :development, :test do
 end
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'puma'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'simple_form'
 gem 'slim-rails'
@@ -38,7 +40,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
-  gem 'sqlite3'
 end
 group :production do
   gem 'pg'
