@@ -2,7 +2,7 @@ set :stage, :production
 set :deploy_to, '/home/yglow/rails'
 
 #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
-set :branch, 'main'
+set :branch, 'develop'
 
 server 'dev.b-labs.ch', user: 'yglow', roles: %w{web app db}
 

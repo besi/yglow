@@ -1,4 +1,4 @@
-set :application, 'IdeaHub'
+set :application, 'yglow'
 set :repo_url, 'git@github.com:besi/ideahub'
 
 set :log_level, :error
@@ -17,4 +17,4 @@ namespace :deploy do
   end
 end
 
-after 'deploy:publishing', 'deploy:restart'
+# after 'deploy:publishing', 'deploy:restart'
