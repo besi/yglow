@@ -82,3 +82,4 @@ pickle-email-*.html
 /config/application.yml
 wiki/
 /config/database.prod.yml
+/.env.production
