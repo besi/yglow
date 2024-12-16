@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 ruby '2.6.10'
-gem 'rails', '4.2.11'
-gem 'sass-rails', '~> 4.0'
+gem 'rails', '~> 4.2.11'
+
+#ERROR:  Error installing sassc:
+#                             The last version of ffi (~> 1.9) to support your Ruby & RubyGems was 1.17.0. Try installing it with `gem install ffi -v 1.17.0` and then running the current command again
+#ffi requires RubyGems version >= 3.3.22. The current RubyGems version is 3.0.3.1. Try 'gem update --system' to update RubyGems itself.
+# gem update --system
+# gem 'ffi', '1.16.0'
+
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
@@ -22,6 +29,13 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'unicorn'
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-console'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rbenv'
+
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'guard-bundler'
