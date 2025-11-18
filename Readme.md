@@ -29,8 +29,8 @@ Api
 
 The Api lets you do these things:
 
-- Rotate colors: `http://yglow.herokuapp.com/api/ping/{number}`
-- Set a color to all lamps: `http://yglow.herokuapp.com/api/color/{hex-color}`
+- Rotate colors: <https://glow.b-labs.ch/api/ping/1>
+- Set a color to all lamps: https://glow.b-labs.ch/api/color/33aaff
 
 
 Deployment
