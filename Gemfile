@@ -20,6 +20,7 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'puma'
+gem 'mqtt'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'simple_form'
 gem 'slim-rails'
